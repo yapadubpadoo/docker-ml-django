@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "0.0.0.0",
-    "10.201.16.6"
+    "10.201.16.6" # change to your local IP
     ]
 
 
