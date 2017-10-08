@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 
 import json
-from .models import MoviesSuggestor
+from .models import MoviesSuggester
 
 class Hello(APIView):
     def get(self, request):
@@ -16,8 +16,8 @@ class Hello(APIView):
 # your ml class here
 class MoviesSuggestionView(APIView):
     def get(self, request):
-        name = request.GET.get('name', 'Star Wars (1977)')
-        movies_list = MoviesSuggestor().suggest(name)
+        from_name = request.GET.get('from', 'Star Wars (1977)')
+        movies_list = MoviesSuggester().suggest(from_name)
         return Response({
             "suggested_movies":movies_list
             })

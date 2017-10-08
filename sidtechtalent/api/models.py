@@ -11,7 +11,7 @@ import os
 # get current path
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-class MoviesSuggestor():
+class MoviesSuggester():
     @staticmethod
     def suggest(base_movie_name):
         columns = ['user_id', 'item_id', 'rating', 'timestamp']
