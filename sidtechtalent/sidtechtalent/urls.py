@@ -21,6 +21,7 @@ from api import views as apiViews
 
 urlpatterns = [
     url(r'^api/hello', apiViews.Hello.as_view(), name="hello"),
+    url(r'^api/movies/suggest', apiViews.MoviesSuggestionView.as_view(), name="movies_suggestion"),
     # your path to api here
     # ... 
     # ...

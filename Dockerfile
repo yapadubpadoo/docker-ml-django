@@ -6,6 +6,8 @@ RUN pip install --upgrade pip
 RUN pip install numpy scipy matplotlib pandas
 # Install django
 RUN pip install django djangorestframework
+# more packages
+RUN pip install scikit-learn
 
 WORKDIR /home
 RUN django-admin startproject sidtechtalent
